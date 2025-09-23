@@ -1,11 +1,11 @@
 <p align="center">
   <a href="https://www.frra.utn.edu.ar/" target="blank">
-  <img src="https://utnrafaela.com.ar/files/logo_utn_frra.png" width="120" alt="Logo UTN Rafaela" />
+  <img src="https://utnrafaela.com.ar/files/logo_utn_frra.png" width="300" alt="Logo UTN Rafaela" />
   </a>
 </p>
 
-UTN FRRa 2025 - Backend usando Nest para construir Web APIs.  
-
+<p style="text-align: center;">UTN FRRa 2025 - Backend usando Nest para construir Web APIs. </p>
+ 
 ## 15/09/2025
 * Vistazo general al proyecto Nest.
 * Creamos el resource CRUD "producto" con la nest-cli. Comandos básicos con la CLI.

@@ -7,10 +7,20 @@ import { CrearProductoDto } from "./dto/crear-producto.dto"
 export class ProductoController {
   constructor(private readonly productoService: ProductoService) {}
 
-  @Get()
-  obtenerProductos () {
+  @Post()
+  crearProducto (@Body() productoDto: CrearProductoDto) {
+    const resultado = this.productoService.crearProducto(productoDto)
     return {
-      datos: productos
+      resultado
+    }
+  }
+
+  @Get()
+  async obtenerProductos () {
+    const resultado = await this.productoService.obtenerProductos()
+
+    return {
+      resultado: resultado
     }
   }
 
@@ -20,16 +30,6 @@ export class ProductoController {
     const productoEncontrado = productos.find((elemento) => elemento.id === idConvertido)
     return {
       datos: productoEncontrado
-    }
-  }
-
-  @Post()
-  crearProducto (@Body() productoDto: CrearProductoDto) {
-    const productoCreado = { nombre: productoDto.nombre, precio: productoDto.precio, id: 10 }
-    productos.push(productoCreado)
-
-    return {
-      datos: productoCreado
     }
   }
 }
