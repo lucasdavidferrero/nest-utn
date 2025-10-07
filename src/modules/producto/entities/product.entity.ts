@@ -7,7 +7,7 @@ export class Product {
 
     @Column("varchar", {
         unique: true,
-        length: 255
+        length: 255,
     })
     titulo: string
 

@@ -19,9 +19,7 @@ export class ProductoController {
   async obtenerProductos () {
     const resultado = await this.productoService.obtenerProductos()
 
-    return {
-      resultado: resultado
-    }
+    return resultado
   }
 
   @Get(":idProducto")
